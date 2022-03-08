@@ -23,17 +23,19 @@ class ImageInfo {
       const { name, url, temperament, origin } = this.data.image;
 
       this.$imageInfo.innerHTML = `
-        <div class="content-wrapper">
-          <div class="title">
-            <div>${name}</div>
-            <div class="close">x</div>
-          </div>
-          <img src="${url}" alt="${name}"/>
-          <div class="description">
-            <div>성격: ${temperament}</div>
-            <div>태생: ${origin}</div>
-          </div>
-        </div>`;
+        <article class="content-wrapper">
+          <header class="title">
+            <h1>${name}</h1>
+            <button class="close">x</button>
+          </header>
+          <figure>
+            <img src="${url}" alt="${name}"/>
+            <section class="description">
+              <figcaption>성격: ${temperament}</figcaption>
+              <figcaption>태생: ${origin}</figcaption>
+            </section>
+          </figure>
+        </article>`;
       this.$imageInfo.style.display = 'block';
     } else {
       this.$imageInfo.style.display = 'none';
