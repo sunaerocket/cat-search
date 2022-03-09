@@ -8,11 +8,11 @@
 
 ## CSS
 
-- [ ] 반응형 검색 결과로 스타일 수정
+- [x] ~~반응형 검색 결과로 스타일 수정~~
 
-  - [ ] 992px 이하: row 당 3개 column
-  - [ ] 768px 이하: row 당 2개 column
-  - [ ] 576px 이하: row 당 1개 column
+  - [x] ~~992px 이하: row 당 3개 column~~
+  - [x] ~~768px 이하: row 당 2개 column~~
+  - [x] ~~576px 이하: row 당 1개 column~~
 
 - [ ] 다크모드 지원
   - [ ] CSS 파일 내 다크 모드 관련 주석 제거
