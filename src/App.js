@@ -7,6 +7,13 @@ class App {
   constructor($target) {
     this.$target = $target;
 
+    this.toggleTheme = new ToggleTheme({
+      $target,
+      onToggle: () => {
+        document.documentElement.classList.toggle('dark-mode');
+      },
+    });
+
     this.searchInput = new SearchInput({
       $target,
       onSearch: (keyword) => {
