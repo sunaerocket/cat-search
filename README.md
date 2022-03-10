@@ -14,11 +14,11 @@
   - [x] ~~768px 이하: row 당 2개 column~~
   - [x] ~~576px 이하: row 당 1개 column~~
 
-- [x] 다크모드 지원
-  - [x] CSS 파일 내 다크 모드 관련 주석 제거
-  - [x] 모든 글자 색상은 #FFFFFF , 배경 색상은 #000000
-  - [x] OS 다크모드 활성화 여부를 기반으로 동작
-  - [x] 유저가 테마를 토글링 할 수 있는 체크박스를 좌상단에 구현
+- [x] ~~다크모드 지원~~
+  - [x] ~~CSS 파일 내 다크 모드 관련 주석 제거~~
+  - [x] ~~모든 글자 색상은 #FFFFFF , 배경 색상은 #000000~~
+  - [x] ~~OS 다크모드 활성화 여부를 기반으로 동작~~
+  - [x] ~~유저가 테마를 토글링 할 수 있는 체크박스를 좌상단에 구현~~
 
 ## 이미지 상세 보기 모달
 
@@ -89,7 +89,7 @@ const request = async (url: string) => {
 ### 1. GET /cats/random50
 
 - Request parameter: None
-- Query paramter: None
+- Query parameter: None
 - Response: Success 200
 
 | Field name | Type  | Description                           |
