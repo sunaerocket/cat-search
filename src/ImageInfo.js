@@ -14,10 +14,17 @@ class ImageInfo {
   }
 
   onClose() {
-    this.setState({
-      visible: false,
-      image: null,
-    });
+    const wrapper = document.querySelector('.content-wrapper');
+    wrapper.classList.remove('fadein');
+    wrapper.classList.add('fadeout');
+    wrapper.onanimationend = () => {
+      wrapper.classList.remove('fadeout');
+
+      this.setState({
+        visible: false,
+        image: null,
+      });
+    };
   }
 
   setState(nextData) {
@@ -45,6 +52,11 @@ class ImageInfo {
         </article>`;
 
       this.$imageInfo.style.display = 'block';
+      const wrapper = document.querySelector('.content-wrapper');
+      wrapper.classList.add('fadein');
+      wrapper.onanimationend = () => {
+        wrapper.classList.remove('fadein');
+      };
 
       this.$imageInfo.addEventListener('click', (event) => {
         const className = event.target.className;
