@@ -77,9 +77,18 @@ body * {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.close {
+  border: none;
+  background-color: transparent;
+  width: 48px;
+  height: 48px;
+  font-size: larger;
+}
+
 .ImageInfo .title {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .ImageInfo .title,

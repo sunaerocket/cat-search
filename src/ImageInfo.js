@@ -13,6 +13,13 @@ class ImageInfo {
     this.render();
   }
 
+  onClose(event) {
+    this.setState({
+      visible: false,
+      image: null,
+    });
+  }
+
   setState(nextData) {
     this.data = nextData;
     this.render();
@@ -26,7 +33,7 @@ class ImageInfo {
         <article class="content-wrapper">
           <header class="title">
             <h1>${name}</h1>
-            <button class="close">x</button>
+            <button class="close">&times;</button>
           </header>
           <figure>
             <img src="${url}" alt="${name}"/>
@@ -36,7 +43,25 @@ class ImageInfo {
             </section>
           </figure>
         </article>`;
+
       this.$imageInfo.style.display = 'block';
+
+      this.$imageInfo.addEventListener('click', (event) => {
+        const className = event.target.className;
+
+        const isCloseButton = className === 'close';
+        const isOverlay = className === 'ImageInfo';
+
+        if (isCloseButton || isOverlay) {
+          this.onClose();
+        }
+      });
+
+      document.body.addEventListener('keyup', (event) => {
+        if (event.key === 'Escape') {
+          this.onClose();
+        }
+      });
     } else {
       this.$imageInfo.style.display = 'none';
     }
