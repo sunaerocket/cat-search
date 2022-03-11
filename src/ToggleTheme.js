@@ -24,7 +24,5 @@ class ToggleTheme {
     $toggleButton.addEventListener('change', () => {
       onToggle();
     });
-
-    console.log('ToggleTheme', this);
   }
 }

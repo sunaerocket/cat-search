@@ -24,10 +24,12 @@ class App {
     this.searchResult = new SearchResult({
       $target,
       initialData: this.data,
-      onClick: (image) => {
-        this.imageInfo.setState({
-          visible: true,
-          image,
+      onClick: (data) => {
+        api.fetchCatById(data.id).then(({ data }) => {
+          this.imageInfo.setState({
+            visible: true,
+            ...data,
+          });
         });
       },
     });
