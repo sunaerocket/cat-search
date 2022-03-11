@@ -13,7 +13,7 @@ class ImageInfo {
     this.render();
   }
 
-  onClose(event) {
+  onClose() {
     this.setState({
       visible: false,
       image: null,
@@ -27,7 +27,7 @@ class ImageInfo {
 
   render() {
     if (this.data.visible) {
-      const { name, url, temperament, origin } = this.data.image;
+      const { name, url, temperament, origin } = this.data;
 
       this.$imageInfo.innerHTML = `
         <article class="content-wrapper">
